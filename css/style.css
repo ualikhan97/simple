@@ -443,7 +443,7 @@ body.lock {
    background: #fdfdfd;
    box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.05);
    position: absolute;
-   right: 10%;
+   right: 160px;
    top: 11%;
    cursor: pointer;
    transition: all 0.3s;
@@ -1845,6 +1845,58 @@ body.lock {
       margin-top: 68px;
    }
 
+   /* /////////// */
+   .rooms__swiper {
+      max-width: 100%;
+      overflow: hidden;
+   }
+
+   .rooms__sl {
+      max-width: 100%;
+   }
+
+   .rooms__wrapper {
+      max-width: 100%;
+      margin-right: 20px;
+      margin-bottom: 75px;
+   }
+
+   #roomswrap3 .rooms__wrap {
+      display: none;
+   }
+   #roomswrap3 .rooms__arrows {
+      top: 51%;
+   }
+
+   .rooms__slide {
+      max-width: 100%;
+   }
+
+   .rooms__gallery {
+      width: 100%;
+   }
+
+   .rooms__sw {
+      max-width: 100%;
+      overflow: visible;
+   }
+
+   .rooms .swiper-wrapper {
+      overflow: visible;
+   }
+   .rooms__arrows {
+      left: 0%;
+      right: 10%;
+   }
+
+   .swiper-horizontal > .swiper-scrollbar,
+   .swiper-scrollbar.swiper-scrollbar-horizontal {
+      bottom: 20px;
+      /* border: 2px solid rgba(189, 112, 72, 0.5); */
+      background-color: rgb(189, 112, 72, 0.5);
+      left: 70px;
+      width: calc(100% - 140px);
+   }
    /* .rooms__slide img {
      width: 100%;
      height: 100%;
@@ -1972,6 +2024,15 @@ body.lock {
       margin-top: 70px;
    }
 
+   .swiper-horizontal > .swiper-scrollbar,
+   .swiper-scrollbar.swiper-scrollbar-horizontal {
+      bottom: 20px;
+      /* border: 2px solid rgba(189, 112, 72, 0.5); */
+      background-color: rgb(189, 112, 72, 0.5);
+      left: 30px;
+      width: calc(100% - 60px);
+   }
+
    /* .services__img-first {
      width: 286px;
      height: 210px;
@@ -2077,6 +2138,15 @@ body.lock {
    .intro__cart {
       width: 58%;
    }
+
+   .rooms__arrows {
+      width: calc(100% + 6px);
+   }
+
+   .rooms__arrows {
+      left: -6%;
+      right: -6%;
+   }
 }
 
 @media (max-width: 670px) {
@@ -2150,6 +2220,10 @@ body.lock {
 @media (max-width: 426px) {
    .title {
       font-size: 25px;
+   }
+
+   .header__shell {
+      padding: 80px 32px 24px;
    }
    .services__title {
       font-size: 30px;
@@ -2424,7 +2498,7 @@ body.lock {
       margin-right: 35px;
    }
 
-   .rooms__swiper {
+   /* .rooms__swiper {
       max-width: 100%;
       overflow: hidden;
    }
@@ -2465,7 +2539,7 @@ body.lock {
 
    .rooms__arrows {
       width: calc(100% + 6px);
-   }
+   } */
 
    .footer__contacts {
       display: flex;

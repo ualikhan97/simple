@@ -32,7 +32,7 @@ var newSwipe = new Swiper(" #roomsswipe", {
          slidesPerGroup: 1,
          spaceBetween: 35,
       },
-      426: {
+      811: {
          slidesPerView: 1,
          slidesPerGroup: 1,
          spaceBetween: 24,
@@ -52,7 +52,7 @@ var newSwipe = new Swiper("#roomsswipe2", {
          slidesPerGroup: 1,
          spaceBetween: 35,
       },
-      426: {
+      811: {
          slidesPerView: 1,
          slidesPerGroup: 1,
          spaceBetween: 24,
@@ -71,7 +71,7 @@ var newSwipe = new Swiper("#roomsswipe3", {
          slidesPerGroup: 1,
          spaceBetween: 35,
       },
-      426: {
+      811: {
          slidesPerView: 1,
          slidesPerGroup: 1,
          spaceBetween: 24,
