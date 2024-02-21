@@ -2233,6 +2233,10 @@ body.lock {
       margin-top: 110px;
    }
 
+   .services__vertical-line {
+      display: none;
+   }
+
    .services__caption {
       margin-bottom: 35px;
    }
@@ -2407,8 +2411,8 @@ body.lock {
    }
 
    .test {
-      padding-bottom: 40px;
-      padding-top: 43px;
+      padding-bottom: 37px;
+      padding-top: 37px;
       padding-left: 19px;
    }
 
@@ -2421,7 +2425,7 @@ body.lock {
    }
 
    .test__description {
-      margin-bottom: 5px;
+      margin-bottom: 20px;
       max-width: none;
    }
 
@@ -2496,6 +2500,10 @@ body.lock {
    }
    .rooms__sl {
       margin-right: 35px;
+   }
+
+   .rooms {
+      margin-bottom: 130px;
    }
 
    /* .rooms__swiper {
