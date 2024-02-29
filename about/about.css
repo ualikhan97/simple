@@ -47,7 +47,7 @@ body.lock {
    height: 100vh;
 }
 
-.title {
+.about-title {
    font-size: 43px;
    font-weight: 400;
 }
@@ -390,7 +390,7 @@ body.lock {
       max-width: 980px;
    }
 
-   .title {
+   .about-title {
       font-size: 39px;
    }
 
@@ -438,7 +438,7 @@ body.lock {
       width: 540px;
    }
 
-   .title {
+   .about-title {
       font-size: 35px;
    }
 
@@ -529,7 +529,7 @@ body.lock {
 }
 
 @media (max-width: 760px) {
-   .title {
+   .about-title {
       font-size: 30px;
    }
    .burger {
@@ -686,7 +686,7 @@ body.lock {
 }
 
 @media (max-width: 426px) {
-   .title {
+   .about-title {
       font-size: 25px;
    }
    .header__shell {

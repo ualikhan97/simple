@@ -83,6 +83,34 @@ var newSwipe = new Swiper("#roomsswipe3", {
    },
 });
 
+const aboutSwiper = new Swiper(".workforce__swiper", {
+   // Optional parameters
+   direction: "horizontal",
+   loop: true,
+   slidesPerView: 1.3, // Показываем текущий слайд полностью и часть предыдущего и следующего слайдов
+   centeredSlides: true,
+   // Выравниваем текущий слайд по центру
+   breakpoints: {
+      220: {
+         slidesPerView: 1.3,
+         // slidesPerGroup: 1,
+         spaceBetween: 35,
+      },
+      811: {
+         slidesPerView: 1.3,
+         // slidesPerGroup: 1,
+         spaceBetween: 50,
+      },
+   },
+   // spaceBetween: 50,
+
+   // Navigation arrows
+   navigation: {
+      nextEl: ".workforce__container .arrow_next",
+      prevEl: ".workforce__container .arrow_prev",
+   },
+});
+
 // document.querySelectorAll(".faq__contain").forEach((faqPlus, index) => {
 //    faqPlus.addEventListener("click", function () {
 //       this.querySelector(".faq__plus").classList.toggle("clicked");
