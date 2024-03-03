@@ -87,19 +87,19 @@ const aboutSwiper = new Swiper(".workforce__swiper", {
    // Optional parameters
    direction: "horizontal",
    loop: true,
-   slidesPerView: 1.3, // Показываем текущий слайд полностью и часть предыдущего и следующего слайдов
+   slidesPerView: 1, // Показываем текущий слайд полностью и часть предыдущего и следующего слайдов
    centeredSlides: true,
    // Выравниваем текущий слайд по центру
    breakpoints: {
       220: {
-         slidesPerView: 1.3,
+         slidesPerView: 1,
          // slidesPerGroup: 1,
-         spaceBetween: 35,
+         spaceBetween: 25,
       },
       811: {
-         slidesPerView: 1.3,
+         slidesPerView: 1,
          // slidesPerGroup: 1,
-         spaceBetween: 50,
+         spaceBetween: 40,
       },
    },
    // spaceBetween: 50,
