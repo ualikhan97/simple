@@ -1592,6 +1592,11 @@ body.lock {
    display: none;
 }
 
+.worker__desctop p,
+.worker__mobile p {
+   margin: 0;
+}
+
 .workforce {
    overflow: hidden;
 }
@@ -1614,27 +1619,27 @@ body.lock {
    opacity: 1;
 }
 
-.worker__title {
+.projects__title {
    font-family: Montserrat Alternates;
    font-size: 40px;
    font-weight: 500;
    line-height: 49px;
    max-width: 601px;
 }
-.worker__title span {
+.projects__title span {
    color: #bd7048;
 }
 
-.worker__wrap {
+.projects__top {
    display: flex;
    justify-content: flex-start;
    align-items: center;
    /* padding-left: 10px; */
    position: relative;
-   margin-bottom: 61px;
+   margin-bottom: 44px;
 }
 
-.worker__title::after {
+.projects__title::after {
    content: "";
    /* width: calc(100% - 10px);  */
    width: 48%;
@@ -1647,7 +1652,7 @@ body.lock {
    right: 0;
 }
 
-.projects {
+.projects__body {
    background-image: url(../img/about/projects/proj.png);
    background-position: center;
    background-repeat: no-repeat;
@@ -1670,6 +1675,11 @@ body.lock {
    justify-content: center;
    align-items: center;
    cursor: pointer;
+
+   transition: all 0.3s;
+}
+.projects__wrap:hover {
+   transform: scale(1.1);
 }
 
 .projects__ring {
@@ -1885,11 +1895,11 @@ body.lock {
       width: 35%;
    }
 
-   .worker__title::after {
+   .projects__title::after {
       width: 35%;
    }
 
-   .projects {
+   .projects__body {
       padding-top: 245px;
       padding-bottom: 160px;
    }
@@ -2024,8 +2034,12 @@ body.lock {
       right: 23px;
    }
 
-   .worker__title {
+   .projects__title {
       font-size: 35px;
+   }
+
+   .projects__title::after {
+      width: 43%;
    }
 }
 
@@ -2268,7 +2282,7 @@ body.lock {
       gap: 20px;
    }
 
-   .projects {
+   .projects__body {
       padding-top: 205px;
       padding-bottom: 125px;
    }
@@ -2325,7 +2339,7 @@ body.lock {
       margin-bottom: 46px;
    }
 
-   .worker__title::after {
+   .projects__title::after {
       display: none;
    }
 }
@@ -2831,7 +2845,7 @@ body.lock {
       right: 14px;
    }
 
-   .worker__title {
+   .projects__title {
       font-size: 30px;
       line-height: 40px;
    }
@@ -2856,7 +2870,7 @@ body.lock {
       font-size: 25px;
    }
 
-   .projects {
+   .projects__body {
       padding-top: 170px;
       padding-bottom: 100px;
    }
@@ -2953,7 +2967,7 @@ body.lock {
       height: 350px;
    }
 
-   .projects {
+   .projects__body {
       padding-top: 150px;
       padding-bottom: 80px;
    }
@@ -3010,7 +3024,7 @@ body.lock {
       width: 68%;
    }
 
-   .projects {
+   .projects__body {
       padding-top: 120px;
       padding-bottom: 70px;
    }
@@ -3477,7 +3491,7 @@ body.lock {
       margin-top: 60px;
    }
 
-   .worker__title {
+   .projects__title {
       font-size: 25px;
       line-height: 35px;
    }
@@ -3486,7 +3500,7 @@ body.lock {
       font-size: 20px;
    }
 
-   .projects {
+   .projects__body {
       padding-top: 111px;
       padding-bottom: 57px;
    }
