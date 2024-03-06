@@ -1730,8 +1730,14 @@ body.lock {
 } */
 
 .drawing {
+   overflow: hidden;
+}
+
+.drawing__contain {
    position: relative;
    margin-bottom: 70px;
+   margin-left: -20px;
+   margin-right: -20px;
 }
 
 .drawing__title {
