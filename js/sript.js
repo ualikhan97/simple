@@ -87,7 +87,7 @@ const aboutSwiper = new Swiper(".workforce__swiper", {
    // Optional parameters
 
    loop: false,
-   slidesPerView: 1, // Показываем текущий слайд полностью и часть предыдущего и следующего слайдов
+   slidesPerView: 1.4, // Показываем текущий слайд полностью и часть предыдущего и следующего слайдов
 
    // Выравниваем текущий слайд по центру
    breakpoints: {
@@ -104,6 +104,33 @@ const aboutSwiper = new Swiper(".workforce__swiper", {
    navigation: {
       nextEl: ".workforce__container .arrow_next",
       prevEl: ".workforce__container .arrow_prev",
+   },
+});
+
+const tenderSwiper = new Swiper(".view__swiper", {
+   // Optional parameters
+
+   loop: true,
+   slidesPerView: 1.4,
+   spaceBetween: 35,
+
+   // Показываем текущий слайд полностью и часть предыдущего и следующего слайдов
+
+   // Выравниваем текущий слайд по центру
+   // breakpoints: {
+   //    220: {
+   //       spaceBetween: 25,
+   //    },
+   //    811: {
+   //       spaceBetween: 40,
+   //    },
+   // },
+   // spaceBetween: 50,
+
+   // Navigation arrows
+   navigation: {
+      nextEl: ".view__contain .arrow_next",
+      prevEl: ".view__contain .arrow_prev",
    },
 });
 

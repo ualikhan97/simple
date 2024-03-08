@@ -1730,14 +1730,8 @@ body.lock {
 } */
 
 .drawing {
-   overflow: hidden;
-}
-
-.drawing__contain {
    position: relative;
    margin-bottom: 70px;
-   margin-left: -20px;
-   margin-right: -20px;
 }
 
 .drawing__title {
@@ -1773,6 +1767,10 @@ body.lock {
 
 .wrapper.drawing__wrap {
    margin-bottom: 60px;
+}
+
+.tender-cart {
+   margin-bottom: 67px;
 }
 
 .tender-cart__left {
@@ -1843,6 +1841,82 @@ body.lock {
    display: flex;
    justify-content: space-between;
 }
+
+.view {
+   overflow: hidden;
+}
+
+.view__title {
+   color: rgb(38, 38, 38);
+   margin-bottom: 54px;
+   font-size: 40px;
+   font-weight: 700;
+   line-height: 49px;
+}
+
+.view__desc {
+   color: rgb(53, 53, 53);
+   padding-left: 20px;
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 24px;
+}
+
+.view__img {
+   width: 312px;
+   height: 235px;
+}
+
+.view__wrap {
+   display: flex;
+   gap: 48px;
+   flex-wrap: wrap;
+}
+
+.view__contain {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   position: relative;
+}
+
+.view__slide {
+   max-width: 100%;
+}
+
+.view__swiper {
+   max-width: 100%;
+}
+
+.view__slide.swiper-slide img {
+   width: none;
+   height: auto;
+   object-fit: contain;
+   border-radius: 0;
+   max-height: none;
+}
+
+.view__swiper {
+   display: none;
+}
+
+.view__arrows {
+   display: flex;
+   justify-content: space-between;
+   position: absolute;
+   left: -6%;
+   right: -6%;
+   transform: translateY(-50%);
+   z-index: 10;
+   top: 50%;
+   display: none;
+}
+
+.view__arrows .arrow {
+   width: 40px;
+   height: 41px;
+}
+
 @media (max-width: 1320px) {
    .services__second.services__second_top {
       left: 60px;
@@ -2039,6 +2113,10 @@ body.lock {
 
    .drawing__title {
       left: 0;
+   }
+
+   .tender-cart__right {
+      margin-right: 0px;
    }
 }
 
@@ -2433,6 +2511,19 @@ body.lock {
    .wrapper.drawing__wrap {
       margin-bottom: 30px;
    }
+
+   .tender-cart {
+      margin-bottom: 51px;
+   }
+
+   .view__title {
+      margin-bottom: 44px;
+      font-size: 35px;
+   }
+
+   .view__contain {
+      gap: 35px;
+   }
 }
 
 @media (max-width: 980px) {
@@ -2601,6 +2692,14 @@ body.lock {
    }
    .intro__cart {
       width: 48%;
+   }
+
+   .tender-cart__left {
+      gap: 20px;
+   }
+
+   .tender-cart__right {
+      gap: 10px;
    }
 }
 
@@ -3029,6 +3128,63 @@ body.lock {
    .drawing__text {
       font-size: 15px;
    }
+
+   .tender-cart__cost {
+      font-size: 18px;
+   }
+
+   .drawing {
+      position: relative;
+      margin-bottom: 50px;
+   }
+
+   .view__title {
+      margin-bottom: 36px;
+   }
+
+   .view__contain {
+      gap: 29px;
+   }
+
+   .view__wrap {
+      gap: 35px;
+   }
+
+   .view__title {
+      font-size: 30px;
+   }
+}
+
+@media (max-width: 710px) {
+   /* .view__img {
+      width: 232px;
+      height: 174px;
+   } */
+
+   .view__desc {
+      font-size: 15px;
+   }
+
+   .view__swiper {
+      display: flex;
+   }
+
+   .view__arrows {
+      left: -2%;
+      right: 0;
+   }
+
+   .view__arrows {
+      display: flex;
+   }
+
+   .view__wrap {
+      display: none;
+   }
+
+   .view .wrapper {
+      padding-right: 0;
+   }
 }
 
 @media (max-width: 700px) {
@@ -3060,6 +3216,24 @@ body.lock {
 
    .design__picture img {
       height: auto;
+   }
+}
+
+@media (max-width: 690px) {
+   .tender-cart__container {
+      display: flex;
+      /* justify-content: space-between; */
+      flex-direction: column;
+   }
+
+   .tender-cart__left {
+      justify-content: space-between;
+      order: 1;
+   }
+
+   .tender-cart__right {
+      margin-bottom: 32px;
+      justify-content: space-between;
    }
 }
 
@@ -3166,6 +3340,11 @@ body.lock {
    .workforce__container {
       padding-left: 8%;
       padding-right: 8%;
+   }
+
+   .view__arrows .arrow {
+      width: 35px;
+      height: 36px;
    }
 }
 
@@ -3691,6 +3870,28 @@ body.lock {
    .drawing__text p:first-child {
       display: none;
    }
+
+   .drawing {
+      position: relative;
+      margin-bottom: 35px;
+   }
+
+   .tender-cart__right {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   .view .wrapper.wrapper__padding {
+      padding-right: 0;
+   }
+
+   .drawing__text {
+      line-height: 18px;
+   }
+
+   .tender-cart__cost {
+      font-size: 15px;
+   }
 }
 
 @media (max-width: 376px) {
@@ -3739,6 +3940,13 @@ body.lock {
 } */
 
 @media (max-width: 350px) {
+   .tender-cart {
+      margin-bottom: 30px;
+   }
+
+   .view__title {
+      margin-bottom: 30px;
+   }
 }
 
 @media (max-width: 321px) {
