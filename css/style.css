@@ -3217,8 +3217,8 @@ body.lock {
    }
    .view__arrows .arrow {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 42%;
+      transform: translateY(-42%);
       z-index: 10;
    }
    .view__arrows .arrow_prev {
@@ -3234,6 +3234,12 @@ body.lock {
 
    .view .wrapper {
       padding-right: 0;
+   }
+
+   .view__slide {
+      display: flex;
+      flex-direction: column;
+      gap: 29px;
    }
 }
 
@@ -3950,6 +3956,13 @@ body.lock {
       overflow: hidden;
       margin-bottom: 44px;
    }
+
+   .view__arrows .arrow {
+      position: absolute;
+      top: 36%;
+      transform: translateY(-36%);
+      z-index: 10;
+   }
 }
 
 @media (max-width: 376px) {
@@ -4004,6 +4017,13 @@ body.lock {
 
    .view__title {
       margin-bottom: 30px;
+   }
+}
+
+@media (max-width: 341px) {
+   .view__arrows .arrow {
+      top: 32%;
+      transform: translateY(-32%);
    }
 }
 
