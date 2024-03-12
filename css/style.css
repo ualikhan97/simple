@@ -117,6 +117,13 @@ body.lock {
    margin: 0 auto;
 }
 
+.cart-wrapper {
+   max-width: 1110px;
+   padding-left: 15px;
+   padding-right: 15px;
+   margin: 0 auto;
+}
+
 .header {
    padding-top: 46px;
    padding-bottom: 40px;
@@ -1510,13 +1517,20 @@ body.lock {
 
 .workforce__arrows {
    display: flex;
-   justify-content: space-between;
+}
+
+.workforce__arrows .arrow {
    position: absolute;
-   left: 10%;
-   right: 10%;
+
    transform: translateY(-50%);
    z-index: 10;
    top: 50%;
+}
+.workforce__arrows .arrow_prev {
+   left: 23px;
+}
+.workforce__arrows .arrow_next {
+   right: 23px;
 }
 
 .workforce__slide {
@@ -1844,6 +1858,7 @@ body.lock {
 
 .view {
    overflow: hidden;
+   margin-bottom: 91px;
 }
 
 .view__title {
@@ -1865,6 +1880,16 @@ body.lock {
 .view__img {
    width: 312px;
    height: 235px;
+   overflow: hidden;
+   border-radius: 20px;
+}
+
+.view__img img {
+   transition: all 0.3s;
+}
+
+.view__img img:hover {
+   transform: scale(1.1);
 }
 
 .view__wrap {
@@ -1901,14 +1926,6 @@ body.lock {
 }
 
 .view__arrows {
-   display: flex;
-   justify-content: space-between;
-   position: absolute;
-   left: -6%;
-   right: -6%;
-   transform: translateY(-50%);
-   z-index: 10;
-   top: 50%;
    display: none;
 }
 
@@ -2524,6 +2541,11 @@ body.lock {
    .view__contain {
       gap: 35px;
    }
+
+   .view {
+      overflow: hidden;
+      margin-bottom: 75px;
+   }
 }
 
 @media (max-width: 980px) {
@@ -2753,6 +2775,14 @@ body.lock {
    }
    .rooms__description {
       display: none;
+   }
+
+   .rooms__title.rooms__title_block {
+      display: block;
+   }
+
+   .rooms__description.rooms__description_block {
+      display: block;
    }
 
    .rooms__title.rooms__title_active {
@@ -3153,6 +3183,11 @@ body.lock {
    .view__title {
       font-size: 30px;
    }
+
+   .view {
+      overflow: hidden;
+      margin-bottom: 60px;
+   }
 }
 
 @media (max-width: 710px) {
@@ -3167,15 +3202,30 @@ body.lock {
 
    .view__swiper {
       display: flex;
+      overflow: visible;
+      margin-left: 0;
+      position: relative;
+      /* width: 80%; */
    }
 
-   .view__arrows {
-      left: -2%;
-      right: 0;
+   .view__contain {
+      gap: 0;
    }
 
    .view__arrows {
       display: flex;
+   }
+   .view__arrows .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+   }
+   .view__arrows .arrow_prev {
+      left: -16px;
+   }
+   .view__arrows .arrow_next {
+      right: 4px;
    }
 
    .view__wrap {
@@ -3745,6 +3795,10 @@ body.lock {
       padding-left: 17px;
    }
 
+   /* .view__swiper {
+      overflow: visible;
+   } */
+
    .design {
       margin-bottom: 31px;
    }
@@ -3881,16 +3935,20 @@ body.lock {
       align-items: flex-start;
    }
 
-   .view .wrapper.wrapper__padding {
-      padding-right: 0;
+   .view__contain {
+      width: 80%;
    }
-
    .drawing__text {
       line-height: 18px;
    }
 
    .tender-cart__cost {
       font-size: 15px;
+   }
+
+   .view {
+      overflow: hidden;
+      margin-bottom: 44px;
    }
 }
 

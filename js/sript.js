@@ -111,7 +111,7 @@ const tenderSwiper = new Swiper(".view__swiper", {
    // Optional parameters
 
    loop: true,
-   slidesPerView: 1.4,
+   slidesPerView: 1.1,
    spaceBetween: 35,
 
    // Показываем текущий слайд полностью и часть предыдущего и следующего слайдов
@@ -187,6 +187,10 @@ document.addEventListener("click", function (event) {
             [i].classList.remove("show");
       });
    }
+});
+
+Fancybox.bind('[data-fancybox="modal"]', {
+   groupAttr: false,
 });
 
 const qq = document.querySelector(".intro__cart-box");

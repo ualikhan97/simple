@@ -7,6 +7,10 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+      />
+      <link
          href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
          rel="stylesheet"
       />
@@ -101,7 +105,11 @@
          <div class="wrapper wrapper__padding">
             <div class="tender-cart__container">
                <div class="tender-cart__left">
-                  <a class="tender-cart__btn" href="#">
+                  <a
+                     class="tender-cart__btn"
+                     data-fancybox="modal"
+                     href="#callback-modal"
+                  >
                      <div class="tender-cart__logo">
                         <svg
                            width="21"
@@ -128,7 +136,12 @@
                      </div>
                      <div class="tender-cart__txt">В корзину</div>
                   </a>
-                  <a class="tender-cart__buy" href="#">купить</a>
+                  <a
+                     class="tender-cart__buy"
+                     data-fancybox="modal"
+                     href="#purchase-modal"
+                     >купить</a
+                  >
                </div>
                <div class="tender-cart__right">
                   <div class="tender-cart__cost">Стоимость услуги:</div>
@@ -142,18 +155,18 @@
          <div class="wrapper wrapper__padding">
             <h2 class="view__title">Смотрите также</h2>
             <div class="view__wrap">
-               <div class="view__contain">
+               <a href="#" class="view__contain">
                   <div class="view__img img-contain">
                      <img src="img/tender/view/view1.jpeg" alt="" />
                   </div>
                   <div class="view__desc">Составление сметы</div>
-               </div>
-               <div class="view__contain">
+               </a>
+               <a href="#" class="view__contain">
                   <div class="view__img img-contain">
                      <img src="img/tender/view/view2.jpeg" alt="" />
                   </div>
                   <div class="view__desc">Печать альбома</div>
-               </div>
+               </a>
             </div>
             <div class="view__contain">
                <div class="view__arrows arrows">
@@ -209,11 +222,15 @@
                   <!-- Additional required wrapper -->
                   <div class="swiper-wrapper">
                      <!-- Slides -->
+
                      <div class="view__slide swiper-slide">
                         <img src="img/tender/view/view-small.png" alt="" />
+                        <!-- <div class="view__desc">Составление сметы</div> -->
                      </div>
+
                      <div class="view__slide swiper-slide">
                         <img src="img/tender/view/view-small2.png" alt="" />
+                        <!-- <div class="view__desc">Печать альбома</div> -->
                      </div>
                   </div>
                </div>
@@ -263,7 +280,23 @@
          <div class="rights__text">(с) 2022. Все права защищены.</div>
       </section>
 
+      <div
+         id="callback-modal"
+         class="callback-modal modal"
+         style="display: none"
+      >
+         <h1>something</h1>
+      </div>
+      <div
+         id="purchase-modal"
+         class="purchase-modal modal"
+         style="display: none"
+      >
+         <h1>buy</h1>
+      </div>
+
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
       <script src="js/sript.js"></script>
    </body>
 </html>
