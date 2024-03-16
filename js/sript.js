@@ -83,6 +83,151 @@ var newSwipe = new Swiper("#roomsswipe3", {
    },
 });
 
+var roomsDesign = new Swiper("#roomsswipe-design", {
+   loop: true,
+   breakpoints: {
+      220: {
+         slidesPerView: 1.1,
+         slidesPerGroup: 1,
+         spaceBetween: 35,
+      },
+      1199: {
+         slidesPerView: 3,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+      811: {
+         slidesPerView: 2,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+   },
+   navigation: {
+      nextEl: "#roomswrap1-design .arrow_next",
+      prevEl: "#roomswrap1-design .arrow_prev",
+   },
+});
+var roomsDesign2 = new Swiper("#roomsswipe2-design", {
+   loop: true,
+   breakpoints: {
+      220: {
+         slidesPerView: 1.1,
+         slidesPerGroup: 1,
+         spaceBetween: 35,
+      },
+      1199: {
+         slidesPerView: 3,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+      811: {
+         slidesPerView: 2,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+   },
+   navigation: {
+      nextEl: "#roomswrap2-design .arrow_next",
+      prevEl: "#roomswrap2-design .arrow_prev",
+   },
+});
+var roomsDesign3 = new Swiper("#roomsswipe3-design", {
+   loop: true,
+   breakpoints: {
+      220: {
+         slidesPerView: 1.1,
+         slidesPerGroup: 1,
+         spaceBetween: 35,
+      },
+      1199: {
+         slidesPerView: 3,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+      811: {
+         slidesPerView: 2,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+   },
+   navigation: {
+      nextEl: "#roomswrap3-design .arrow_next",
+      prevEl: "#roomswrap3-design .arrow_prev",
+   },
+});
+var roomsDesign4 = new Swiper("#roomsswipe4-design", {
+   loop: true,
+   breakpoints: {
+      220: {
+         slidesPerView: 1.1,
+         slidesPerGroup: 1,
+         spaceBetween: 35,
+      },
+      1199: {
+         slidesPerView: 3,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+      811: {
+         slidesPerView: 2,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+   },
+   navigation: {
+      nextEl: "#roomswrap4-design .arrow_next",
+      prevEl: "#roomswrap4-design .arrow_prev",
+   },
+});
+var roomsDesign5 = new Swiper("#roomsswipe5-design", {
+   loop: true,
+   breakpoints: {
+      220: {
+         slidesPerView: 1.1,
+         slidesPerGroup: 1,
+         spaceBetween: 35,
+      },
+      1199: {
+         slidesPerView: 3,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+      811: {
+         slidesPerView: 2,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+   },
+   navigation: {
+      nextEl: "#roomswrap5-design .arrow_next",
+      prevEl: "#roomswrap5-design .arrow_prev",
+   },
+});
+var roomsDesign6 = new Swiper("#roomsswipe6-design", {
+   loop: true,
+   breakpoints: {
+      220: {
+         slidesPerView: 1.1,
+         slidesPerGroup: 1,
+         spaceBetween: 35,
+      },
+      1199: {
+         slidesPerView: 3,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+      811: {
+         slidesPerView: 2,
+         slidesPerGroup: 1,
+         spaceBetween: 24,
+      },
+   },
+   navigation: {
+      nextEl: "#roomswrap6-design .arrow_next",
+      prevEl: "#roomswrap6-design .arrow_prev",
+   },
+});
+
 const aboutSwiper = new Swiper(".workforce__swiper", {
    // Optional parameters
 
@@ -92,9 +237,11 @@ const aboutSwiper = new Swiper(".workforce__swiper", {
    // Выравниваем текущий слайд по центру
    breakpoints: {
       220: {
+         slidesPerView: 1.4,
          spaceBetween: 25,
       },
       811: {
+         slidesPerView: 1,
          spaceBetween: 40,
       },
    },
@@ -189,14 +336,20 @@ document.addEventListener("click", function (event) {
    }
 });
 
-Fancybox.bind('[data-fancybox="modal"]', {
-   groupAttr: false,
+let cart = document.querySelector(".intro__cart-box");
+let introCart = document.querySelector(".intro__cart");
+cart.addEventListener("click", function () {
+   // console.log("n");
+   introCart.classList.toggle("active");
 });
 
-const qq = document.querySelector(".intro__cart-box");
-const ww = document.querySelector(".intro__cart");
+document.addEventListener("click", function (event) {
+   // Проверяем, был ли клик вне блока .intro__cart-box
+   if (!cart.contains(event.target) && !introCart.contains(event.target)) {
+      introCart.classList.remove("active");
+   }
+});
 
-qq.addEventListener("click", function () {
-   ww.classList.toggle("active");
-   console.log("clicked");
+Fancybox.bind('[data-fancybox="modal"]', {
+   groupAttr: false,
 });
