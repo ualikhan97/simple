@@ -84,12 +84,13 @@ var newSwipe = new Swiper("#roomsswipe3", {
 });
 
 var roomsDesign = new Swiper("#roomsswipe-design", {
-   loop: true,
+   loop: false,
    breakpoints: {
       220: {
          slidesPerView: 1.1,
          slidesPerGroup: 1,
          spaceBetween: 35,
+         loop: true,
       },
       1199: {
          slidesPerView: 3,
@@ -108,12 +109,13 @@ var roomsDesign = new Swiper("#roomsswipe-design", {
    },
 });
 var roomsDesign2 = new Swiper("#roomsswipe2-design", {
-   loop: true,
+   loop: false,
    breakpoints: {
       220: {
          slidesPerView: 1.1,
          slidesPerGroup: 1,
          spaceBetween: 35,
+         loop: true,
       },
       1199: {
          slidesPerView: 3,
@@ -132,12 +134,13 @@ var roomsDesign2 = new Swiper("#roomsswipe2-design", {
    },
 });
 var roomsDesign3 = new Swiper("#roomsswipe3-design", {
-   loop: true,
+   loop: false,
    breakpoints: {
       220: {
          slidesPerView: 1.1,
          slidesPerGroup: 1,
          spaceBetween: 35,
+         loop: true,
       },
       1199: {
          slidesPerView: 3,
@@ -156,12 +159,13 @@ var roomsDesign3 = new Swiper("#roomsswipe3-design", {
    },
 });
 var roomsDesign4 = new Swiper("#roomsswipe4-design", {
-   loop: true,
+   loop: false,
    breakpoints: {
       220: {
          slidesPerView: 1.1,
          slidesPerGroup: 1,
          spaceBetween: 35,
+         loop: true,
       },
       1199: {
          slidesPerView: 3,
@@ -180,12 +184,13 @@ var roomsDesign4 = new Swiper("#roomsswipe4-design", {
    },
 });
 var roomsDesign5 = new Swiper("#roomsswipe5-design", {
-   loop: true,
+   loop: false,
    breakpoints: {
       220: {
          slidesPerView: 1.1,
          slidesPerGroup: 1,
          spaceBetween: 35,
+         loop: true,
       },
       1199: {
          slidesPerView: 3,
@@ -204,12 +209,13 @@ var roomsDesign5 = new Swiper("#roomsswipe5-design", {
    },
 });
 var roomsDesign6 = new Swiper("#roomsswipe6-design", {
-   loop: true,
+   loop: false,
    breakpoints: {
       220: {
          slidesPerView: 1.1,
          slidesPerGroup: 1,
          spaceBetween: 35,
+         loop: true,
       },
       1199: {
          slidesPerView: 3,
@@ -336,20 +342,23 @@ document.addEventListener("click", function (event) {
    }
 });
 
-let cart = document.querySelector(".intro__cart-box");
-let introCart = document.querySelector(".intro__cart");
-cart.addEventListener("click", function () {
-   // console.log("n");
-   introCart.classList.toggle("active");
-});
+if (document.querySelectorAll(".modal").length > 0) {
+   Fancybox.bind('[data-fancybox="modal"]', {
+      groupAttr: false,
+   });
+}
 
-document.addEventListener("click", function (event) {
-   // Проверяем, был ли клик вне блока .intro__cart-box
-   if (!cart.contains(event.target) && !introCart.contains(event.target)) {
-      introCart.classList.remove("active");
-   }
-});
-
-Fancybox.bind('[data-fancybox="modal"]', {
-   groupAttr: false,
-});
+if (document.querySelectorAll(".intro__cart-box").length > 0) {
+   let cart = document.querySelector(".intro__cart-box");
+   let introCart = document.querySelector(".intro__cart");
+   cart.addEventListener("click", function () {
+      // console.log("n");
+      introCart.classList.toggle("active");
+   });
+   document.addEventListener("click", function (event) {
+      // Проверяем, был ли клик вне блока .intro__cart-box
+      if (!cart.contains(event.target) && !introCart.contains(event.target)) {
+         introCart.classList.remove("active");
+      }
+   });
+}

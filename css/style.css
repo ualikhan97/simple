@@ -983,6 +983,8 @@ body.lock {
    font-size: 20px;
    font-weight: 600;
    line-height: 24px;
+   white-space: nowrap;
+   width: calc(100% - 180px);
 }
 
 .rooms__choose {
@@ -1934,12 +1936,19 @@ body.lock {
    height: 41px;
 }
 
-.popup-cart__title {
-   color: rgb(38, 38, 38);
-   margin-bottom: 67px;
+.cart-title {
    font-size: 30px;
    font-weight: 600;
    line-height: 37px;
+   color: rgb(38, 38, 38);
+}
+
+.popup-cart__title {
+   margin-bottom: 67px;
+}
+
+.popup-cart__title.margin {
+   margin-bottom: 34px;
 }
 
 .popup-cart__services-layout {
@@ -1960,11 +1969,27 @@ body.lock {
    max-width: 514px;
 }
 
+.popup-cart__left .popup-cart__services:first-child {
+   margin-bottom: 46px;
+   margin-left: 42px;
+}
+
+.popup-cart__services-price.margin {
+   margin-right: 43px;
+}
+
+.popup-cart__services-bottom ul li:not(:last-child) {
+   margin-bottom: 8px;
+}
+
 .popup-cart__services-top {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   gap: 120px;
+}
+
+.popup-cart__services-top.gap {
+   gap: 89px;
 }
 
 .popup-cart__services-contain {
@@ -1972,6 +1997,10 @@ body.lock {
    align-items: center;
    gap: 23px;
    /* margin-right: 150px; */
+}
+
+.popup-cart__services-contain.right {
+   justify-content: space-between;
 }
 .popup-cart__services-bottom {
    color: rgba(38, 38, 38, 0.5);
@@ -1989,9 +2018,217 @@ body.lock {
 .popup-cart__services {
    display: flex;
    flex-direction: column;
-   gap: 21px;
+   gap: 16px;
 }
 
+.popup-cart__services.frame {
+   border: 1px solid rgb(189, 112, 72);
+   border-radius: 15px;
+   padding-top: 35px;
+   padding-left: 41px;
+   padding-right: 41px;
+   margin-bottom: 45px;
+}
+
+.popup-cart__services-txt {
+   font-size: 20px;
+}
+
+.popup-cart__services-bottom.start {
+   align-self: self-start;
+   margin-left: 82px;
+}
+
+.popup-cart__services.margin {
+   gap: 10px;
+}
+
+.popup-cart__title.margin {
+   margin-bottom: 50px;
+}
+.popup-cart__services.margin:not(:last-child) {
+   margin-bottom: 21px;
+}
+
+.popup-cart__services-contain.gap {
+   gap: 41px;
+}
+
+.popup-cart__right-title {
+   color: rgb(38, 38, 38);
+   margin-bottom: 43px;
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 24px;
+}
+
+.popup-cart__services-price.opacity {
+   color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-cart__right-txt {
+   color: rgb(189, 112, 72);
+
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 24px;
+}
+
+.popup-cart__right-price {
+   color: rgba(0, 0, 0, 0.5);
+   width: 118px;
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 24px;
+   text-align: left;
+}
+
+.popup-cart__right-info {
+   display: flex;
+   justify-content: space-between;
+}
+
+.popup-cart__right-contain {
+   display: flex;
+   flex-direction: column;
+   gap: 27px;
+   margin-bottom: 50px;
+}
+
+.popup-cart__right-txt.color {
+   color: black;
+}
+
+.popup-cart__right-price.color {
+   color: black;
+}
+
+.popup-cart__right-btn {
+   padding: 23px 50px;
+   max-width: 421px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 18px;
+}
+.popup-cart__right-btn:not(:last-child) {
+   margin-bottom: 19px;
+}
+
+.popup-cart__right-btn.second {
+   background: rgb(255, 221, 203);
+   color: #bd7048;
+   transition: background 0.3s;
+}
+.popup-cart__right-btn.second:hover {
+   background: rgb(248 191 160);
+}
+.popup-cart__right-btn.third {
+   background-color: #f14635;
+   transition: background 0.3s;
+   margin-bottom: 15px;
+   display: flex;
+   gap: 15px;
+   align-items: center;
+   justify-content: center;
+   padding: 14px 50px;
+}
+.popup-cart__right-btn.third:hover {
+   background-color: #b6291b;
+}
+
+.popup-cart__right-privacy {
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 18px;
+   color: rgba(38, 38, 38, 0.5);
+   transition: color 0.3s;
+}
+.popup-cart__right-privacy:hover {
+   color: rgba(38, 38, 38, 1);
+}
+.popup-cart__right-privacy span {
+   color: #bd7048;
+}
+
+.popup-cart__right-wrap {
+   /* max-width: 430px; */
+}
+
+.popup-cart__right {
+   border-radius: 15px;
+   max-width: 514px;
+   background: rgb(255, 246, 241);
+   padding-left: 51px;
+   padding-right: 27px;
+   padding-top: 42px;
+   padding-bottom: 59px;
+   position: relative;
+   bottom: 36px;
+}
+
+.popup-cart__container {
+   display: flex;
+   gap: 82px;
+}
+
+.popup-cart__txt {
+   max-width: 460px;
+   padding-left: 56px;
+}
+.popup-cart__txt p {
+   color: rgba(38, 38, 38, 0.5);
+
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 18px;
+}
+.popup-cart__txt p:first-child {
+   margin-bottom: 10px;
+}
+
+.popup-cart__right-contain .popup-cart__right-info:first-child {
+   margin-bottom: 12px;
+}
+
+.popup-cart__add-roooms {
+   font-family: Montserrat Alternates;
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 24px;
+   color: rgba(55, 55, 55, 0.5);
+   text-align: left;
+}
+
+.popup-cart__add {
+   display: flex;
+   flex-direction: column;
+   gap: 17px;
+}
+
+.del {
+   color: #bd7048;
+}
+.change {
+   color: #373737;
+}
+
+.popup-cart__services-square.flex {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.popup-cart__right-img {
+   width: 34px;
+   height: 38px;
+}
+.popup-cart__right-img {
+   height: 100%;
+   object-fit: contain;
+}
 .rooms__wrapper.rooms-design {
    position: relative;
    margin-bottom: 91px;
@@ -2028,6 +2265,8 @@ body.lock {
 
 .wrapper.rooms-design {
    overflow: visible;
+   padding-left: 15px;
+   padding-right: 15px;
 }
 
 .rooms__slide.rooms-design {
@@ -4098,8 +4337,37 @@ body.lock {
    }
 
    .rooms__arrows .rooms-design.arrow {
-      width: 39px;
+      width: 40px;
       height: 40px;
+   }
+
+   .rooms__choose {
+      font-size: 14px;
+   }
+
+   .rooms__choice {
+      gap: 10px;
+      padding: 10px 13px;
+      width: 145px;
+   }
+
+   .rooms__name {
+      font-size: 19px;
+      width: calc(100% - 145px);
+      padding-left: 0;
+   }
+
+   .rooms__arrows .rooms-design.arrow_next {
+      right: 0;
+   }
+   .rooms__arrows .rooms-design.arrow_prev {
+      left: 0;
+   }
+
+   .wrapper.rooms-design {
+      overflow: visible;
+      padding-left: 35px;
+      padding-right: 35px;
    }
 }
 
