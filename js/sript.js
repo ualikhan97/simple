@@ -362,3 +362,63 @@ if (document.querySelectorAll(".intro__cart-box").length > 0) {
       }
    });
 }
+
+// let cb = document.querySelectorAll(".checkbox");
+
+// let cbSvg = document.querySelector(".checkbox-svg");
+
+// cb.forEach((item) => {
+//    let svg = item.querySelector(".checkbox-svg");
+//    item.addEventListener("click", function () {
+//       svg.classList.toggle("cls");
+//    });
+// });
+
+let cb = document.querySelectorAll(".checkbox");
+
+cb.forEach((item) => {
+   let svg = item.querySelector(".checkbox-svg");
+
+   item.addEventListener("click", function () {
+      document.querySelectorAll(".checkbox-svg").forEach(function (svg) {
+         svg.classList.add("cls");
+      });
+      document.querySelectorAll(".popup-cart__services").forEach((item) => {
+         if (!item.classList.contains("margin")) {
+            item.classList.toggle("frame");
+         }
+      });
+      svg.classList.toggle("cls");
+   });
+});
+
+let cBox = document.querySelectorAll(".check");
+
+cBox.forEach((item) => {
+   let svg = item.querySelector(".check-svg");
+   item.addEventListener("click", function () {
+      svg.classList.toggle("del");
+   });
+});
+
+let removeEl = document.querySelectorAll(".remove");
+let removeElelemt = document.querySelectorAll(".remove-cross");
+
+removeEl.forEach((item) => {
+   let el = item.closest(".popup-cart__add-roooms");
+
+   item.addEventListener("click", function () {
+      if (el) {
+         el.classList.add("delete");
+      }
+   });
+});
+removeElelemt.forEach((item) => {
+   let el = item.closest(".popup-cart__add-roooms");
+
+   item.addEventListener("click", function () {
+      if (el) {
+         el.classList.add("delete");
+      }
+   });
+});

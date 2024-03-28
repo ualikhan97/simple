@@ -1963,6 +1963,7 @@ body.lock {
    border: 2px solid rgb(0, 0, 0);
    width: 37px;
    height: 37px;
+   cursor: pointer;
 }
 
 .popup-cart__left {
@@ -1972,6 +1973,10 @@ body.lock {
 .popup-cart__left .popup-cart__services:first-child {
    margin-bottom: 46px;
    margin-left: 42px;
+}
+.popup-cart__left .popup-cart__services:nth-child(2) {
+   margin-bottom: 46px;
+   margin-left: 35px;
 }
 
 .popup-cart__services-price.margin {
@@ -2024,10 +2029,13 @@ body.lock {
 .popup-cart__services.frame {
    border: 1px solid rgb(189, 112, 72);
    border-radius: 15px;
-   padding-top: 35px;
+   /* padding-top: 35px;
    padding-left: 41px;
-   padding-right: 41px;
+   padding-right: 41px; */
+   padding: 35px;
    margin-bottom: 45px;
+   /* margin-bottom: 0; */
+   margin-left: 0 !important;
 }
 
 .popup-cart__services-txt {
@@ -2145,12 +2153,16 @@ body.lock {
    line-height: 18px;
    color: rgba(38, 38, 38, 0.5);
    transition: color 0.3s;
+   cursor: pointer;
 }
 .popup-cart__right-privacy:hover {
    color: rgba(38, 38, 38, 1);
 }
-.popup-cart__right-privacy span {
+.popup-cart__right-privacy a {
    color: #bd7048;
+}
+.popup-cart__right-privacy a:hover {
+   text-decoration: underline;
 }
 
 .popup-cart__right-wrap {
@@ -2208,11 +2220,70 @@ body.lock {
    gap: 17px;
 }
 
-.del {
+.popup-cart__services-price.display {
+   display: none;
+}
+
+.popup-cart__right.display {
+   display: none;
+}
+
+.remove-cross {
+   color: rgb(55, 55, 55);
+   font-family: Montserrat Alternates;
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 18px;
+   letter-spacing: 0%;
+   text-align: left;
+   display: none;
+}
+
+.checkbox-svg.cls {
+   display: none;
+}
+
+.check-svg.del {
+   display: none;
+}
+
+.modal-closed {
+   position: absolute;
+   top: 30px;
+   right: 30px;
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   cursor: pointer;
+}
+
+.fancybox__content > .f-button.is-close-btn {
+   display: none;
+}
+
+.modal {
+   margin: 50px 20px;
+}
+
+.fancybox__slide {
+   padding: 0 !important;
+}
+.remove {
    color: #bd7048;
+   margin-left: 10px;
+   transition: all 0.3s;
+   cursor: pointer;
+}
+.remove:hover {
+   color: #e27c45;
+   margin-left: 10px;
 }
 .change {
    color: #373737;
+}
+
+.popup-cart__add-roooms.delete {
+   display: none;
 }
 
 .popup-cart__services-square.flex {
@@ -2236,6 +2307,10 @@ body.lock {
 
 .rooms__arrows.rooms-design {
    display: flex;
+}
+
+.popup-cart__right-wr.display {
+   display: none;
 }
 
 .rooms__arrows .rooms-design.arrow {
@@ -2315,6 +2390,12 @@ body.lock {
 @media (max-width: 1270px) {
    .how__second {
       left: -20px;
+   }
+}
+
+@media (max-width: 1250px) {
+   .popup-cart__services-top.gap {
+      gap: 40px;
    }
 }
 
@@ -2478,6 +2559,26 @@ body.lock {
    .tender-cart__right {
       margin-right: 0px;
    }
+
+   .popup-cart__container {
+      display: flex;
+      gap: 40px;
+   }
+
+   .popup-cart__right {
+      padding-left: 31px;
+      padding-right: 20px;
+
+      padding-bottom: 44px;
+   }
+
+   .popup-cart__services-top.gap {
+      gap: 40px;
+   }
+
+   .popup-cart__services.frame {
+      padding: 24px;
+   }
 }
 
 @media (max-width: 1140px) {
@@ -2618,9 +2719,47 @@ body.lock {
    }
 }
 
+@media (max-width: 1118px) {
+   .popup-cart__services-price {
+      display: none;
+   }
+   .popup-cart__services-price.display {
+      display: block;
+   }
+
+   .popup-cart__left {
+      margin-bottom: 30px;
+      max-width: 360px;
+   }
+
+   .popup-cart__container {
+      display: flex;
+      gap: 20px;
+   }
+
+   .popup-cart__services-contain.gap {
+      gap: 24px;
+   }
+
+   .popup-cart__services-bottom.start {
+      margin-left: 56px;
+   }
+}
+
 @media (max-width: 1055px) {
    .design__description {
       max-width: 430px;
+   }
+
+   .popup-cart__services-layout,
+   .popup-cart__right-txt,
+   .popup-cart__right-price,
+   .popup-cart__add-roooms {
+      font-size: 17px;
+   }
+
+   .popup-cart__services-bottom {
+      font-size: 13px;
    }
 }
 
@@ -2889,6 +3028,10 @@ body.lock {
       overflow: hidden;
       margin-bottom: 75px;
    }
+
+   .popup-cart__services-bottom ul li {
+      margin-left: 15px;
+   }
 }
 
 @media (max-width: 980px) {
@@ -3065,6 +3208,58 @@ body.lock {
 
    .tender-cart__right {
       gap: 10px;
+   }
+
+   .popup-cart__right.display {
+      display: block;
+   }
+   .popup-cart__right-wr {
+      display: none;
+   }
+
+   .popup-cart__left {
+      margin-bottom: 30px;
+      max-width: none;
+      width: 100%;
+   }
+
+   .modal-closed__caption {
+      display: none;
+   }
+
+   .popup-cart__title.margin {
+      margin-bottom: 30px;
+   }
+
+   .popup-cart__add {
+      margin-bottom: 50px;
+   }
+
+   .popup-cart__right-btn.third {
+      margin-bottom: 35px;
+   }
+
+   .remove-cross {
+      display: inline-block;
+      cursor: pointer;
+      transition: color 0.3s;
+   }
+   .remove-cross:hover {
+      color: #bd7048;
+   }
+
+   .popup-cart__add-roooms {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   .remove {
+      display: none;
+   }
+
+   .popup-cart__services-bottom {
+      align-self: start;
    }
 }
 
@@ -3540,6 +3735,29 @@ body.lock {
       overflow: hidden;
       margin-bottom: 60px;
    }
+
+   .popup-cart__services-square {
+      width: 24px;
+      height: 23px;
+   }
+
+   .check-svg,
+   .checkbox-svg {
+      width: 13px;
+      height: 10px;
+   }
+
+   .cart-title {
+      font-size: 25px;
+   }
+
+   .popup-cart__left .popup-cart__services:nth-child(2) {
+      margin-bottom: 25px;
+   }
+
+   .popup-cart__title {
+      margin-bottom: 40px;
+   }
 }
 
 @media (max-width: 710px) {
@@ -3708,6 +3926,14 @@ body.lock {
       padding-top: 150px;
       padding-bottom: 80px;
    }
+
+   .popup-cart__services-layout {
+      text-align: left;
+   }
+
+   .popup-cart__right-price {
+      text-align: right;
+   }
 }
 
 @media (max-width: 570px) {
@@ -3777,6 +4003,10 @@ body.lock {
    .projects__body {
       padding-top: 120px;
       padding-bottom: 70px;
+   }
+
+   .popup-cart__right-btn {
+      padding: 23px 10px;
    }
 }
 
@@ -4368,6 +4598,55 @@ body.lock {
       overflow: visible;
       padding-left: 35px;
       padding-right: 35px;
+   }
+
+   .popup-cart__services-layout,
+   .popup-cart__right-txt,
+   .popup-cart__right-price,
+   .popup-cart__add-roooms {
+      font-size: 15px;
+   }
+
+   .popup-cart__services-bottom {
+      font-size: 10px;
+   }
+   .popup-cart__services-txt {
+      font-size: 15px;
+   }
+
+   .popup-cart__services-bottom.start {
+      margin-left: 47px;
+   }
+
+   .modal-closed__icon svg {
+      width: 26px;
+      height: 26px;
+   }
+
+   .modal-closed__icon {
+      position: relative;
+      top: -20px;
+   }
+
+   .fancybox__content {
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+      padding-left: 0;
+      padding-right: 0;
+   }
+
+   .popup-cart__right {
+      padding-left: 26px;
+      padding-right: 20px;
+      padding-bottom: 44px;
+   }
+
+   .popup-cart__services-bottom ul li:not(:last-child) {
+      margin-bottom: 0px;
+   }
+
+   .popup-cart__services.frame {
+      padding: 20px;
    }
 }
 
