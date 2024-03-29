@@ -374,7 +374,7 @@ if (document.querySelectorAll(".intro__cart-box").length > 0) {
 //    });
 // });
 
-let cb = document.querySelectorAll(".checkbox");
+let cb = document.querySelectorAll(".popup-cart__services-check");
 
 cb.forEach((item) => {
    let svg = item.querySelector(".checkbox-svg");
@@ -392,7 +392,7 @@ cb.forEach((item) => {
    });
 });
 
-let cBox = document.querySelectorAll(".check");
+let cBox = document.querySelectorAll(".popup-cart__services");
 
 cBox.forEach((item) => {
    let svg = item.querySelector(".check-svg");
@@ -402,23 +402,68 @@ cBox.forEach((item) => {
 });
 
 let removeEl = document.querySelectorAll(".remove");
-let removeElelemt = document.querySelectorAll(".remove-cross");
+let removeElement = document.querySelectorAll(".remove-cross");
 
+let popWrap = document.querySelector(".pop-wrap");
+
+// removeEl.forEach((item) => {
+//    let el = item.closest(".popup-cart__add-roooms");
+
+//    item.addEventListener("click", function () {
+//       if (el) {
+//          el.classList.add("delete");
+//       }
+//    });
+// });
+// removeElement.forEach((item) => {
+//    let el = item.closest(".popup-cart__add-roooms");
+
+//    item.addEventListener("click", function () {
+//       if (el) {
+//          el.classList.add("delete");
+//          let remainingElements = document.querySelectorAll(
+//             ".popup-cart__add-roooms:not(.delete)"
+//          );
+//          if (remainingElements.length === 0) {
+//             targetBlock.classList.add("all-deleted");
+//          }
+//       }
+//    });
+// });
+
+removeElement.forEach((item) => {
+   item.addEventListener("click", function () {
+      let el = item.closest(".popup-cart__add-roooms");
+      if (el) {
+         el.classList.add("delete");
+         checkRemainingBlocks();
+      }
+   });
+});
+
+function checkRemainingBlocks() {
+   let remainingBlocks = document.querySelectorAll(
+      ".popup-cart__add-roooms:not(.delete)"
+   );
+   if (remainingBlocks.length === 0) {
+      popWrap.querySelector(".popup-cart__title").classList.add("all-deleted");
+   }
+}
 removeEl.forEach((item) => {
-   let el = item.closest(".popup-cart__add-roooms");
-
    item.addEventListener("click", function () {
+      let el = item.closest(".popup-cart__add-roooms");
       if (el) {
          el.classList.add("delete");
+         checkRemainingBlocks();
       }
    });
 });
-removeElelemt.forEach((item) => {
-   let el = item.closest(".popup-cart__add-roooms");
 
-   item.addEventListener("click", function () {
-      if (el) {
-         el.classList.add("delete");
-      }
-   });
-});
+function checkRemainingBlocks() {
+   let remainingBlocks = document.querySelectorAll(
+      ".popup-cart__add-roooms:not(.delete)"
+   );
+   if (remainingBlocks.length === 0) {
+      popWrap.querySelector(".popup-cart__title").classList.add("all-deleted");
+   }
+}
